@@ -1,4 +1,4 @@
-package api.apigithub;
+package api.validation;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;

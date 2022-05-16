@@ -1,11 +1,11 @@
-package api.apigithub;
+package api.validation;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
 
-public class CheckingHeader {
+public class Header {
     public static final String BASE_URL = "https://api.github.com";
 
     @Test

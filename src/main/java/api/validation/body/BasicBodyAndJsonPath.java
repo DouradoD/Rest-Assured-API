@@ -1,4 +1,4 @@
-package api.apigithub;
+package api.validation.body;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -10,7 +10,7 @@ import java.util.Map;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CheckingBody {
+public class BasicBodyAndJsonPath {
 
     public static final String BASE_URL = "https://api.github.com/rate_limit";
 
@@ -45,7 +45,6 @@ public class CheckingBody {
     public void rootPath() {
         RestAssured.given().when().get(BASE_URL)
                 .then()
-//                body("resources", response -> containsString(response.body().jsonPath().get("resources")));
                 .rootPath("resources.core")
                 .body("limit", is(60))
                 .body("remaining", equalTo(60))
