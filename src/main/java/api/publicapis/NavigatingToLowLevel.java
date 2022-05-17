@@ -45,6 +45,6 @@ public class NavigatingToLowLevel {
                 .body("", hasKey("Category"))
                 .body("", anyOf(hasValue("Animals")))
                 .body("", allOf(notNullValue()))
-                .body("", anyOf(is("API")));
+                .body("", anyOf(hasValue("apiKey")));
     }
 }

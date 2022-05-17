@@ -19,7 +19,7 @@ public class BasicHamcrest {
     }
 
     @Test
-    public void jsonPathMethod() {
+    public void jsonPathWithHamcrestMethod() {
         JsonPath jsonPath = RestAssured.given().when().given().get(BASE_URL).body().jsonPath();
         Map<String, String> subMap = jsonPath.get("resources.core");
         int limit = jsonPath.get("resources.core.limit");
@@ -49,5 +49,28 @@ public class BasicHamcrest {
                 not(containsStringIgnoringCase("a")));
 
 
+    }
+
+    @Test
+    public void bodyWithHamcrest() {
+        String limit = "limit";
+        String resource = "resource";
+        RestAssured.given()
+                .when()
+                .given()
+                .get(BASE_URL)
+                .then()
+                .rootPath("resources.core")
+                .body(limit, equalTo(60))
+                .body(limit, greaterThanOrEqualTo(60))
+                .body(limit, lessThan(61))
+                .body(limit, is(60))
+                .body(resource, is("core"))
+                .body(resource, equalTo("core"))
+                .body(resource, containsString("or"))
+                .body(resource, containsStringIgnoringCase("e"))
+                .body(resource, not(containsString("a")))
+                .body(resource, not(is("graphql")))
+                .body(resource, not(equalTo("Core")));
     }
 }
