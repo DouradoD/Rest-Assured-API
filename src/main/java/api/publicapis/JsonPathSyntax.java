@@ -1,7 +1,8 @@
+package api.publicapis;
+
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.hasItem;
 
 public class JsonPathSyntax {
