@@ -3,9 +3,10 @@ package api.validation;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.is;
 
-public class Header {
+public class TestHeader {
     public static final String BASE_URL = "https://api.github.com";
 
     @Test

@@ -2,7 +2,6 @@ package api.validation.body;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
