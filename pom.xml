@@ -66,9 +66,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
+                    <!--Specify the JUnit tags-->
+                    <groups>all_examples, status_code_example, checking_body_example</groups>
                     <includes>
+                        <!--Specify the API test path-->
                         <include>**/api/**/*.java</include>
-                        <!--                        <include>**/validation/**/*.java</include>-->
                     </includes>
                 </configuration>
                 <dependencies>

@@ -2,10 +2,12 @@ package api.validation.body;
 
 import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
 
+@Tag("all_examples")
 public class ParserXML {
 
     public static final String BASE_URL_JSON = "https://api.github.com/";

@@ -1,10 +1,12 @@
 package api.validation.body;
 
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
 
+@Tag("all_examples")
 public class RepeatedItemsHamcrest {
     public static final String BASE_URL = "https://reqres.in/api/users?page=1";
 

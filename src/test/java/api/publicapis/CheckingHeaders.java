@@ -1,9 +1,11 @@
 package api.publicapis;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
+@Tag("all_examples")
 public class CheckingHeaders {
     private static final String BaseURL = "https://api.publicapis.org/";
     private static final String ENTRIES_PATH = "entries";
