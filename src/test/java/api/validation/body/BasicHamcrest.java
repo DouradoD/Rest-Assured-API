@@ -2,7 +2,7 @@ package api.validation.body;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -10,6 +10,7 @@ import java.util.Map;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+@Tag("all_examples")
 public class BasicHamcrest {
     public static final String BASE_URL = "https://api.github.com/rate_limit";
 

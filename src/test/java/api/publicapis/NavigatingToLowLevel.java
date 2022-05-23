@@ -2,6 +2,7 @@ package api.publicapis;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+@Tag("all_examples")
 public class NavigatingToLowLevel {
     private static final String BaseURL = "https://api.publicapis.org/";
     private static final String ENTRIES_PATH = "entries";
